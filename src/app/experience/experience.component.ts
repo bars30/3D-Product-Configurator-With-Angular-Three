@@ -18,7 +18,7 @@ extend({ OrbitControls});
     <ngt-directional-light [intensity]="2"] [position]="[0, 0, -1]" />
     <ngt-point-light [intensity]="0.5" [position]="[1, 1, 0]" />
     <ngt-point-light [intensity]="0.5" [position]="[-0.5, -0.5, 0]" />
-    <ngt-primitive *args="[model()]" [position]="[0, -0.7, -0.1]" />
+    <ngt-primitive *args="[model()]" [position]="[0, 0, 0]" />
     <ngt-orbit-controls 
     #orbitControls
     *args="[camera(), glDomElement()]"
@@ -45,6 +45,9 @@ export class Experience {
     // const material = mesh.material as MeshStandardMaterial;
     // material.color.set(new Color('#b3478c'))
     
+    gltf.scene.scale.set(10, 10, 10);
+console.log(gltf.scene);
+
     return gltf.scene;
   })
 
@@ -55,7 +58,7 @@ export class Experience {
     injectBeforeRender(()=>{
       const orbitControls = this.orbitControls()?.nativeElement;
       if (orbitControls) {
-        orbitControls.update()
+        // orbitControls.update()
       }
     })
   }
