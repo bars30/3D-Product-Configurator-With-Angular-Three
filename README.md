@@ -19,8 +19,13 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 2️⃣ 🔴Could not load assets/scene.gltf: THREE.GLTFLoader: Failed to load buffer "scene.bin".
 🟢Try dragging the entire .zip file into the editor. All of the files in that folder are part of the model.
 
+## Useful Links
+https://angular-threejs.netlify.app/docs/getting-started/introduction/
+https://www.youtube.com/watch?v=9j-k5BdH22g&t=539s
 
-
+## Npm Commands
+ng add angular-three
+npm i three-stdlib
 
 
 
